@@ -1,24 +1,88 @@
+main{
+    height: 93vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.menu{
+    height: 200px;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px;
+    border: solid thin;
+    font-size: 30px;
+}
+.btns{
+ display: flex;
+ gap: 50px;
+}
+h4{ 
+    position:absolute;
+    animation: movem ease 13s infinite;
+    color: rgba(165, 42, 42, 0.651);
+}
+h4:nth-child(2){ 
+    position:absolute;
+    animation: movem ease 10s infinite;
+    color: rgb(161, 152, 152);
+}
+@keyframes movem{
+    0%{
+        transform: translate(-170px,0px);
+    }
+    12%{
+        transform: translate(170px,0px);
+    }
+    25%{
+        transform: translate(170px,100px);
+    }
+    37%{
+        transform: translate(-170px,100px);
+    }
+    50%{
+        transform: translate(-170px,0px);
+    }
+    62%{
+        transform: translate(170px,0px);
+    }
+    75%{
+        transform: translate(170px,-100px);
+    }
+    87%{
+        transform: translate(-170px,-100px);
+    }
+    100%{
+        transform: translate(-170px,0px);
+    }
+}
 .parent{
     flex-direction: column;
     align-items: center;
+    display: none;
 }
 div{
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 span{
     height: 120px;
     width: 120px;
-    border: solid;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 50px;
     cursor: pointer;
+    background-color: white;
 }
 span:hover{
-    box-shadow: rgb(180, 177, 177) 2px 3px 7px;
-    background-color: rgba(172, 172, 172, 0.212);
+    background-color: lightgrey;
+}
+#turn{
+    font-size: 26px;
 }
 #one{
     background-color: rgb(253, 122, 122);
@@ -26,14 +90,49 @@ span:hover{
 #two{
     background-color: antiquewhite;
 }
+.gamerule{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.gamerule button{
+ width: 30%;
+}
+button{
+    padding: 10px;
+}
+footer{
+    height: 7vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer a{
+    transition: all 0.5s ease;
+}
+footer a:hover{
+    transform: translateY(-10px);
+}
 @media(max-width:769px){
+    .menu{
+        font-size: 18px;
+        width: 70%;
+        height: 170px;
+        padding: 50px;
+    }
     div{
         display: flex;
-        gap: 10px;
+        gap: 3px;
     }
     span{
         height: 45px;
         width: 45px;
-        border: solid;
+    }
+    h1{
+        font-size: 28px;
+    }
+    #turn{
+        font-size: 20px;
     }
 }

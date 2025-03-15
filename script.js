@@ -1,3 +1,14 @@
+
+function startGame(){
+    document.getElementsByClassName('menu')[0].style.display ="none";
+    document.getElementsByClassName('parent')[0].style.display ="flex";
+    document.getElementsByClassName('gamerule')[0].style.display ="none";
+}
+function gameRule(){
+    document.getElementsByClassName('menu')[0].style.display ="none";
+    document.getElementsByClassName('parent')[0].style.display ="none";
+    document.getElementsByClassName('gamerule')[0].style.display ="flex";
+}
 var box =document.getElementsByTagName('span');
 var h1 = document.getElementById('turn');
 var counter=1;//two differentiate between players depending on the no evenness or oddness
@@ -15,13 +26,13 @@ for(var i=0;i<box.length;i++){
             this.innerHTML ="O";
             h1.innerHTML ="Player one goes";
         }
+        horizontal();
+         vertical();
+         diagonal();
+         counter++;
     }else{
         alert('choose empty box');
     }
-       horizontal();
-        vertical();
-        diagonal();
-        counter++;
     });
 }
 function horizontal(){
