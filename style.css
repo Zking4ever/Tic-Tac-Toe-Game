@@ -1,0 +1,39 @@
+.parent{
+    flex-direction: column;
+    align-items: center;
+}
+div{
+    display: flex;
+    gap: 10px;
+}
+span{
+    height: 120px;
+    width: 120px;
+    border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+span:hover{
+    box-shadow: rgb(180, 177, 177) 2px 3px 7px;
+    background-color: rgba(172, 172, 172, 0.212);
+}
+#one{
+    background-color: rgb(253, 122, 122);
+}
+#two{
+    background-color: antiquewhite;
+}
+@media(max-width:769px){
+    div{
+        display: flex;
+        gap: 10px;
+    }
+    span{
+        height: 45px;
+        width: 45px;
+        border: solid;
+    }
+}
