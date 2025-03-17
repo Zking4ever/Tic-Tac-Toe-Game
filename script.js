@@ -1,4 +1,25 @@
-
+//theme change feature
+var changer =document.getElementsByTagName('div')[0]; var theme=0;
+changer.addEventListener('click',function(){
+    if(theme==0){
+        document.getElementsByTagName('main')[0].style.color ="white";
+        document.getElementsByTagName('body')[0].style.color ="white";
+        document.getElementsByTagName('main')[0].style.backgroundColor ="black";
+        document.getElementsByTagName('body')[0].style.backgroundColor ="black";
+        document.getElementById('day').style.display ="block";
+        document.getElementById('night').style.display ="none";
+         theme=1;
+    }
+    else{
+        document.getElementsByTagName('main')[0].style.color ="black";
+        document.getElementsByTagName('body')[0].style.color ="black";
+        document.getElementsByTagName('main')[0].style.backgroundColor ="white";
+        document.getElementsByTagName('body')[0].style.backgroundColor ="white";
+        document.getElementById('day').style.display ="none";
+        document.getElementById('night').style.display ="block";
+        theme =0;
+    }
+});
 function startGame(){
     document.getElementsByClassName('menu')[0].style.display ="none";
     document.getElementsByClassName('parent')[0].style.display ="flex";
